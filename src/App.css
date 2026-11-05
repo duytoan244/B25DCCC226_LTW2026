@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
+
+:root { --blue:#2563eb; --navy:#172554; --muted:#64748b; --line:#e2e8f0; --bg:#f3f6fb; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:'Be Vietnam Pro',Arial,sans-serif; color:#172033; background:var(--bg); }
+button,input,select { font:inherit; }
+button { cursor:pointer; }
+button:disabled { cursor:not-allowed; opacity:.55; }
+.app-shell { min-height:100vh; display:flex; flex-direction:column; }
+.site-header { background:#fff; border-bottom:1px solid var(--line); padding:18px max(24px,calc((100% - 1080px)/2)); display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; }
+.brand { font-size:20px; font-weight:800; color:var(--navy); }
+.nav { display:flex; gap:22px; flex-wrap:wrap; }
+.nav a { color:#475569; text-decoration:none; font-weight:600; padding:8px 0; }
+.nav a.active { color:var(--blue); text-decoration:underline; text-underline-offset:6px; }
+.container { width:min(100% - 32px,1000px); margin:34px auto; flex:1; }
+.panel { background:#fff; border:1px solid var(--line); border-radius:18px; padding:28px; box-shadow:0 8px 28px rgba(15,23,42,.045); margin-bottom:22px; }
+h1 { margin:0 0 18px; font-size:28px; color:var(--navy); }
+h2 { color:var(--navy); }
+.hero { text-align:center; padding:42px 28px; background:linear-gradient(135deg,#eaf2ff,#fff 65%); }
+.hero h1 { font-size:38px; margin:10px 0; }
+.hero p { color:var(--muted); margin:0; }
+.eyebrow { color:var(--blue); font-size:12px; font-weight:800; letter-spacing:1.3px; }
+.rules { line-height:1.9; color:#475569; padding-left:22px; }
+.start-form { display:grid; gap:10px; max-width:440px; margin-top:24px; }
+.start-form label,.filters label { font-weight:700; font-size:14px; }
+input,select { width:100%; border:1px solid #cbd5e1; border-radius:10px; padding:12px 14px; background:#fff; outline:none; }
+input:focus,select:focus { border-color:var(--blue); box-shadow:0 0 0 3px #dbeafe; }
+.primary-button,.secondary-button,.danger-button,.helpers button,.panel > button { border:0; border-radius:10px; padding:12px 18px; font-weight:700; }
+.primary-button { background:var(--blue); color:#fff; }
+.secondary-button { background:#eaf0ff; color:var(--blue); text-decoration:none; display:inline-flex; align-items:center; }
+.danger-button { background:#fee2e2; color:#b91c1c; }
+.record { color:#a16207; font-weight:700; text-align:center; }
+.footer { text-align:center; color:#94a3b8; padding:20px; font-size:13px; }
+.filters { display:grid; grid-template-columns:220px 1fr; gap:16px; margin:20px 0; }
+.filters label { display:grid; gap:8px; }
+.muted { color:var(--muted); }
+.table-wrap { overflow-x:auto; }
+table { border-collapse:collapse; width:100%; min-width:620px; }
+th,td { text-align:left; padding:13px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { background:#f1f5f9; color:#334155; }
+td a { color:var(--blue); text-decoration:none; }
+td a:hover { text-decoration:underline; }
+.question-meta { color:var(--blue); font-weight:800; margin-bottom:14px; }
+.question-text { font-size:22px; line-height:1.5; margin:12px 0 24px; }
+.detail-options { display:grid; gap:12px; margin:22px 0; }
+.detail-option { padding:14px; border-radius:10px; background:#f8fafc; border:1px solid var(--line); }
+.detail-correct { background:#dcfce7; border-color:#86efac; color:#166534; }
+.play-top { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:18px; }
+.play-top h1 { margin:0; }
+.timer { border-radius:12px; background:#dbeafe; color:#1d4ed8; font-weight:800; padding:12px 18px; }
+.timer-danger { background:#fee2e2; color:#dc2626; }
+.answer-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.answer-button { min-height:66px; text-align:left; padding:16px; border:2px solid var(--line); border-radius:12px; background:#f8fafc; color:#1e293b; font-weight:600; transition:.15s; }
+.answer-button:hover:not(:disabled) { border-color:#93c5fd; background:#eff6ff; }
+.answer-selected { background:#fef3c7; border-color:#f59e0b; }
+.answer-correct { background:#dcfce7; border-color:#22c55e; color:#166534; }
+.answer-wrong { background:#fee2e2; border-color:#ef4444; color:#991b1b; }
+.answer-hidden { visibility:hidden; }
+.helpers { display:flex; flex-wrap:wrap; gap:10px; margin:18px 0; }
+.helpers button { background:#e0e7ff; color:#3730a3; }
+.score-panel { background:#fff; padding:20px; border-radius:16px; border:1px solid var(--line); }
+.score-grid { display:grid; grid-template-columns:repeat(15,1fr); gap:7px; margin-top:14px; }
+.score-cell { display:grid; place-items:center; min-height:36px; border-radius:7px; background:#e2e8f0; color:#475569; font-weight:700; font-size:13px; }
+.score-correct { background:#bbf7d0; color:#166534; }
+.score-rescue { background:#fed7aa; color:#9a3412; }
+.score-current { outline:3px solid #334155; outline-offset:1px; }
+.result-panel { text-align:center; max-width:650px; margin:50px auto; }
+.result-panel h1 { margin-top:12px; }
+.result-panel p { font-size:17px; }
+.result-actions { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:24px; }
+.history-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.stats { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0 26px; }
+.stats div { padding:16px; background:#eff6ff; border-radius:12px; display:grid; gap:8px; }
+.stats span { color:var(--muted); font-size:13px; }
+.stats strong { color:var(--navy); font-size:24px; }
+.notice { padding:24px; background:#fff; border-radius:12px; }
+.error { color:#b91c1c; }
+.not-found { text-align:center; }
+@media(max-width:650px) {
+  .site-header { padding:16px; }
+  .container { margin:20px auto; }
+  .panel { padding:20px; }
+  .filters { grid-template-columns:1fr; }
+  .answer-grid { grid-template-columns:1fr; }
+  .score-grid { grid-template-columns:repeat(5,1fr); }
+  .stats { grid-template-columns:1fr; }
+  .hero h1 { font-size:30px; }
+}
